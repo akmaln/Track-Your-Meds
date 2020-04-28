@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		4079E2B724576F6000ED0A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2B624576F6000ED0A8B /* AppDelegate.swift */; };
 		4079E2B924576F6000ED0A8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2B824576F6000ED0A8B /* SceneDelegate.swift */; };
-		4079E2BB24576F6000ED0A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2BA24576F6000ED0A8B /* ViewController.swift */; };
 		4079E2BE24576F6000ED0A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4079E2BC24576F6000ED0A8B /* Main.storyboard */; };
 		4079E2C024576F6800ED0A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4079E2BF24576F6800ED0A8B /* Assets.xcassets */; };
 		4079E2C324576F6800ED0A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4079E2C124576F6800ED0A8B /* LaunchScreen.storyboard */; };
+		4079E2D12458A1C400ED0A8B /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2D02458A1C400ED0A8B /* Medication.swift */; };
+		4079E2D32458BAF200ED0A8B /* MyMedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2D22458BAF200ED0A8B /* MyMedicineTableViewController.swift */; };
+		4079E2D52458BBB600ED0A8B /* AddNewMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2D42458BBB600ED0A8B /* AddNewMedicineViewController.swift */; };
+		4079E2D72458BC1800ED0A8B /* MedicineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2D62458BC1800ED0A8B /* MedicineTableViewCell.swift */; };
+		4079E2D92458CAF600ED0A8B /* MedicineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2D82458CAF600ED0A8B /* MedicineDetailViewController.swift */; };
+		4079E2DC2458D6ED00ED0A8B /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079E2DB2458D6ED00ED0A8B /* MedicationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4079E2B324576F6000ED0A8B /* TrackYourMeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackYourMeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4079E2B624576F6000ED0A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4079E2B824576F6000ED0A8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4079E2BA24576F6000ED0A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4079E2BD24576F6000ED0A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4079E2BF24576F6800ED0A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4079E2C224576F6800ED0A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4079E2C424576F6800ED0A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4079E2D02458A1C400ED0A8B /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Medication.swift; path = TrackYourMeds/Model/Medication.swift; sourceTree = SOURCE_ROOT; };
+		4079E2D22458BAF200ED0A8B /* MyMedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyMedicineTableViewController.swift; path = "TrackYourMeds/View Controllers /MyMedicineTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		4079E2D42458BBB600ED0A8B /* AddNewMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMedicineViewController.swift; sourceTree = "<group>"; };
+		4079E2D62458BC1800ED0A8B /* MedicineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicineTableViewCell.swift; path = "TrackYourMeds/View Controllers /MedicineTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		4079E2D82458CAF600ED0A8B /* MedicineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicineDetailViewController.swift; path = TrackYourMeds/Storyboard/MedicineDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		4079E2DB2458D6ED00ED0A8B /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		4079E2B524576F6000ED0A8B /* TrackYourMeds */ = {
 			isa = PBXGroup;
 			children = (
-				4079E2B624576F6000ED0A8B /* AppDelegate.swift */,
-				4079E2B824576F6000ED0A8B /* SceneDelegate.swift */,
-				4079E2BA24576F6000ED0A8B /* ViewController.swift */,
-				4079E2BC24576F6000ED0A8B /* Main.storyboard */,
-				4079E2BF24576F6800ED0A8B /* Assets.xcassets */,
-				4079E2C124576F6800ED0A8B /* LaunchScreen.storyboard */,
+				4079E2CF24589D4400ED0A8B /* Storyboard */,
+				4079E2CA24589C7400ED0A8B /* Model */,
+				4079E2DA2458D67800ED0A8B /* Model Controller */,
+				4079E2CB24589C9100ED0A8B /* VIews */,
+				4079E2CC24589CA900ED0A8B /* View Controllers  */,
+				4079E2CE24589CFD00ED0A8B /* Recources  */,
 				4079E2C424576F6800ED0A8B /* Info.plist */,
 			);
 			path = TrackYourMeds;
+			sourceTree = "<group>";
+		};
+		4079E2CA24589C7400ED0A8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4079E2D02458A1C400ED0A8B /* Medication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4079E2CB24589C9100ED0A8B /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				4079E2D62458BC1800ED0A8B /* MedicineTableViewCell.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		4079E2CC24589CA900ED0A8B /* View Controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				4079E2D22458BAF200ED0A8B /* MyMedicineTableViewController.swift */,
+				4079E2D42458BBB600ED0A8B /* AddNewMedicineViewController.swift */,
+				4079E2D82458CAF600ED0A8B /* MedicineDetailViewController.swift */,
+			);
+			path = "View Controllers ";
+			sourceTree = "<group>";
+		};
+		4079E2CE24589CFD00ED0A8B /* Recources  */ = {
+			isa = PBXGroup;
+			children = (
+				4079E2B624576F6000ED0A8B /* AppDelegate.swift */,
+				4079E2B824576F6000ED0A8B /* SceneDelegate.swift */,
+				4079E2BF24576F6800ED0A8B /* Assets.xcassets */,
+			);
+			path = "Recources ";
+			sourceTree = "<group>";
+		};
+		4079E2CF24589D4400ED0A8B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4079E2BC24576F6000ED0A8B /* Main.storyboard */,
+				4079E2C124576F6800ED0A8B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4079E2DA2458D67800ED0A8B /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4079E2DB2458D6ED00ED0A8B /* MedicationController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4079E2BB24576F6000ED0A8B /* ViewController.swift in Sources */,
 				4079E2B724576F6000ED0A8B /* AppDelegate.swift in Sources */,
+				4079E2D72458BC1800ED0A8B /* MedicineTableViewCell.swift in Sources */,
+				4079E2D32458BAF200ED0A8B /* MyMedicineTableViewController.swift in Sources */,
+				4079E2D12458A1C400ED0A8B /* Medication.swift in Sources */,
+				4079E2D92458CAF600ED0A8B /* MedicineDetailViewController.swift in Sources */,
 				4079E2B924576F6000ED0A8B /* SceneDelegate.swift in Sources */,
+				4079E2DC2458D6ED00ED0A8B /* MedicationController.swift in Sources */,
+				4079E2D52458BBB600ED0A8B /* AddNewMedicineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
