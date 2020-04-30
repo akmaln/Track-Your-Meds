@@ -16,8 +16,8 @@ class MedicationController {
         loadFromPersistentStore() 
     }
     
-    func addMedication(medicationName: String, dosage: String, numberOfPills: Int, taken: Bool) {
-        let medication = Medication(medicationName: medicationName, numberOfPills: numberOfPills, dosage: dosage, taken: taken)
+    func addMedication(medicationName: String, dosage: String, numberOfPills: Int, taken: Bool, numberOfTimesPerDay: Int) {
+        let medication = Medication(medicationName: medicationName, numberOfPills: numberOfPills, dosage: dosage, numberOfTimesPerDay: numberOfTimesPerDay, taken: taken)
         medications.append(medication)
         
     }
@@ -25,6 +25,24 @@ class MedicationController {
     func deleteMedication(medication: Medication) {
         guard let index = medications.firstIndex(of: medication) else { return }
         medications.remove(at: index) 
+    }
+    
+    func updateHasBeenTaken(medication: Medication) {
+        guard let index = medications.firstIndex(of: medication) else { return }
+        medications[index].taken = !medications[index].taken
+    }
+    
+    func updateMeds(medication: Medication, medicationName: String, numberOfPills: Int, dosage: String, numberOfTimesPerDay: Int) {
+        guard let index = medications.firstIndex(of: medication) else { return }
+        var scratch = medication
+        
+        scratch.medicationName = medicationName
+        scratch.numberOfPills = numberOfPills
+        scratch.dosage = dosage
+        scratch.numberOfTimesPerDay = numberOfTimesPerDay 
+        
+        medications.remove(at: index)
+        medications.append(scratch) 
     }
     
     var takenMeds: [Medication] {

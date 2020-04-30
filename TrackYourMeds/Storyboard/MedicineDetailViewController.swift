@@ -16,6 +16,7 @@ class MedicineDetailViewController: UIViewController {
     @IBOutlet weak var nextDoseLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
+    var medicationController: MedicationController? 
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,5 +12,6 @@ struct Medication: Codable, Equatable {
     var medicationName: String
     var numberOfPills: Int
     var dosage: String
+    var numberOfTimesPerDay: Int 
     var taken: Bool 
 }

@@ -9,13 +9,13 @@
 import UIKit
 
 protocol MedicineTableViewCellDelegate {
-    func toggleHasTaken(for cell: MedicineTableViewCell)
+    func presentAlert(medication: Medication)
 }
 
 class MedicineTableViewCell: UITableViewCell {
 
     @IBOutlet weak var medicineNameLabel: UILabel!
-    @IBOutlet weak var numberOfTimesPerDayLabel: UILabel!
+    @IBOutlet weak var medicationDoseLabel: UILabel!
     
     var medication: Medication? {
         didSet{
@@ -25,15 +25,19 @@ class MedicineTableViewCell: UITableViewCell {
     
     var delegate: MedicineTableViewCellDelegate?
 
-    @IBAction func takenUntakenButton(_ sender: Any) {
-        medication!.taken = !medication!.taken
-        delegate?.toggleHasTaken(for: self) 
+    @IBAction func takeMedicineButton(_ sender: Any) {
+        guard let medication = medication else { return }
+        delegate?.presentAlert(medication: medication)
+        
     }
+    
+    
     
     func updateViews() {
         guard let medication = medication else { return }
         
         medicineNameLabel.text = medication.medicationName
+        medicationDoseLabel.text = medication.dosage
     }
     
 }
