@@ -24,15 +24,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="und-h8-eL1">
-                                            <rect key="frame" x="20" y="11" width="247" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <rect key="frame" x="20" y="11" width="247" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDS-hP-0oM">
                                             <rect key="frame" x="20" y="38" width="247" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.030849339440464973" green="0.058165594935417175" blue="0.031898241490125656" alpha="0.64636840820312502" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F0-eG-FNc">
@@ -49,11 +49,11 @@
                                     <constraints>
                                         <constraint firstItem="und-h8-eL1" firstAttribute="leading" secondItem="VpG-Xj-OvG" secondAttribute="leadingMargin" id="8xH-zp-UeS"/>
                                         <constraint firstItem="4F0-eG-FNc" firstAttribute="leading" secondItem="VDS-hP-0oM" secondAttribute="trailing" constant="8" id="EPe-Bs-bh0"/>
-                                        <constraint firstItem="VDS-hP-0oM" firstAttribute="top" secondItem="und-h8-eL1" secondAttribute="bottom" constant="6" id="FIs-Ke-x6c"/>
                                         <constraint firstItem="VDS-hP-0oM" firstAttribute="leading" secondItem="VpG-Xj-OvG" secondAttribute="leadingMargin" id="LG2-PW-GSW"/>
                                         <constraint firstItem="VDS-hP-0oM" firstAttribute="bottom" secondItem="VpG-Xj-OvG" secondAttribute="bottomMargin" id="Pxy-Tl-d2d"/>
                                         <constraint firstAttribute="bottom" secondItem="4F0-eG-FNc" secondAttribute="bottom" constant="20" id="R2S-NJ-vT6"/>
                                         <constraint firstItem="und-h8-eL1" firstAttribute="top" secondItem="VpG-Xj-OvG" secondAttribute="topMargin" id="Y2Q-YZ-32t"/>
+                                        <constraint firstItem="VDS-hP-0oM" firstAttribute="top" secondItem="und-h8-eL1" secondAttribute="bottom" constant="3" id="dhN-wr-YP9"/>
                                         <constraint firstItem="4F0-eG-FNc" firstAttribute="top" secondItem="VpG-Xj-OvG" secondAttribute="top" constant="20" id="iMA-Ee-h1L"/>
                                         <constraint firstItem="4F0-eG-FNc" firstAttribute="leading" secondItem="und-h8-eL1" secondAttribute="trailing" constant="8" id="lLY-rv-eiM"/>
                                         <constraint firstAttribute="trailing" secondItem="4F0-eG-FNc" secondAttribute="trailing" constant="10" id="ntZ-6I-syB"/>
@@ -92,23 +92,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dat-gD-5CW">
-                                <rect key="frame" x="0.0" y="818" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tiA-xf-jhm"/>
-                                    <barButtonItem systemItem="done" id="fmV-O9-Hgw">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="doneButton:" destination="bS1-Dn-dDi" id="i8i-Yd-Zt6"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NRE-BC-5KF">
                                 <rect key="frame" x="20" y="188" width="374" height="272"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pill Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBY-7G-4vK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Pill Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBY-7G-4vK">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,7 +119,7 @@
                                         <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Dose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI7-i1-gq1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Per Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI7-i1-gq1">
                                         <rect key="frame" x="0.0" y="140" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,15 +145,30 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dat-gD-5CW">
+                                <rect key="frame" x="0.0" y="827" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tiA-xf-jhm"/>
+                                    <barButtonItem systemItem="done" id="fmV-O9-Hgw">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="doneButton:" destination="bS1-Dn-dDi" id="i8i-Yd-Zt6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dat-gD-5CW" firstAttribute="top" secondItem="NRE-BC-5KF" secondAttribute="bottom" constant="358" id="Dzc-Qk-nbx"/>
-                            <constraint firstItem="dat-gD-5CW" firstAttribute="leading" secondItem="jp3-QC-pXy" secondAttribute="leading" id="L4k-pL-yT3"/>
-                            <constraint firstItem="NRE-BC-5KF" firstAttribute="top" secondItem="k2b-6H-FOv" secondAttribute="top" constant="144" id="Nm5-i8-lie"/>
+                            <constraint firstItem="k2b-6H-FOv" firstAttribute="bottom" secondItem="NRE-BC-5KF" secondAttribute="bottom" constant="402" id="C7o-L9-kIR"/>
+                            <constraint firstItem="dat-gD-5CW" firstAttribute="trailing" secondItem="k2b-6H-FOv" secondAttribute="trailing" id="K80-sX-NGb"/>
+                            <constraint firstAttribute="bottom" secondItem="dat-gD-5CW" secondAttribute="bottom" constant="20" id="PMX-hL-o6T"/>
                             <constraint firstItem="NRE-BC-5KF" firstAttribute="leading" secondItem="k2b-6H-FOv" secondAttribute="leading" constant="20" id="RTT-1b-aWf"/>
-                            <constraint firstItem="dat-gD-5CW" firstAttribute="centerX" secondItem="NRE-BC-5KF" secondAttribute="centerX" id="Xxk-Yg-bce"/>
+                            <constraint firstItem="dat-gD-5CW" firstAttribute="trailing" secondItem="k2b-6H-FOv" secondAttribute="trailing" id="gy2-xP-HWR"/>
+                            <constraint firstItem="dat-gD-5CW" firstAttribute="leading" secondItem="k2b-6H-FOv" secondAttribute="leading" id="vm8-cj-t9g"/>
                             <constraint firstItem="k2b-6H-FOv" firstAttribute="trailing" secondItem="NRE-BC-5KF" secondAttribute="trailing" constant="20" id="yD3-Xz-FK6"/>
+                            <constraint firstItem="dat-gD-5CW" firstAttribute="leading" secondItem="k2b-6H-FOv" secondAttribute="leading" id="zCm-Ah-cQe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k2b-6H-FOv"/>
                     </view>

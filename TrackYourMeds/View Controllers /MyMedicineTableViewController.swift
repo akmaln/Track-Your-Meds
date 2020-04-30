@@ -44,7 +44,12 @@ class MyMedicineTableViewController: UITableViewController {
             addMedicineVC.delegate = self 
         } else {
             guard let medsDetailVC = segue.destination as? MedicineDetailViewController else { return }
+            if let index = tableView.indexPathForSelectedRow?.row {
+                medsDetailVC.medication = medicationController.medications[index] 
+            }
             medsDetailVC.medicationController = medicationController
+            
+            
         }
     }
     
@@ -68,11 +73,19 @@ extension MyMedicineTableViewController: NewMedicationDelegate {
 extension MyMedicineTableViewController: MedicineTableViewCellDelegate {
     func presentAlert(medication: Medication) {
             let alert = UIAlertController(title: "Confirm", message: "You should take \(medication.dosage)mg of \(medication.medicationName)!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Okay!", style: .cancel, handler: nil))
-        
+        alert.addAction(UIAlertAction(title: "Okay!", style: .cancel) { alert in
+            if let index = self.medicationController.medications.firstIndex(where: { $0 == medication }) {
+                self.medicationController.medications[index].numberOfPills -= 1
+            }
+            self.tableView.reloadData() 
+        })
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         self.present(alert, animated: true)
-        }
     }
+    
+    
+
+}
     
 
 

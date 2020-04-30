@@ -16,27 +16,25 @@ class MedicineDetailViewController: UIViewController {
     @IBOutlet weak var nextDoseLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
-    var medicationController: MedicationController? 
+    var medicationController: MedicationController?
+    var medication: Medication?
+    
+    func updateViews() {
+        guard let medication = medication else { return }
+        medicineNameLabel.text = medication.medicationName
+        pillDosageLabel.text = medication.dosage
+        nextDoseLabel.text = String(medication.numberOfTimesPerDay)
+        quantityLabel.text = String(medication.numberOfPills) 
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
     @IBAction func doneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil) 
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

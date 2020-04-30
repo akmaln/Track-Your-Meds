@@ -37,7 +37,7 @@ class MedicineTableViewCell: UITableViewCell {
         guard let medication = medication else { return }
         
         medicineNameLabel.text = medication.medicationName
-        medicationDoseLabel.text = medication.dosage
+        medicationDoseLabel.text = "\(medication.dosage)mg"
     }
     
 }
