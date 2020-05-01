@@ -15,6 +15,7 @@ class MyMedicineTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.dataSource = self 
         
     }
@@ -57,6 +58,7 @@ class MyMedicineTableViewController: UITableViewController {
         if editingStyle == .delete {
             medicationController.medications.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            medicationController.saveToPersistentStore()
     }
 }
     
